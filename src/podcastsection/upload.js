@@ -101,7 +101,8 @@ function Upload({refresh}) {
           console.log(data);
           if(data){
             setCategories(data.data);
-          }
+          }else{
+            console.log("No data of category");
         }
       }
       // calll the function
