@@ -4,7 +4,7 @@ import ProfileMenu from "./navbar"
 import SimpleFooter from "./footer"
 import { Radio, Typography } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
-import './app.css';
+import "./app.module.css";
 import axios from "axios";
 function Icon() {
     return (
