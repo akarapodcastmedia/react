@@ -75,7 +75,7 @@ function Upload({refresh}) {
   }
   let accesstoken=null;
   let tracker=0;
-  useEffect(async ()=>{
+  useEffect(async()=>{
     if(refresh && tracker==0){
       async function togetrefresh(){
         axios.defaults.withCredentials = true;
@@ -108,7 +108,7 @@ function Upload({refresh}) {
       // calll the function
       togetrefresh();  
     }
-
+    }
   },[]);
  
  
