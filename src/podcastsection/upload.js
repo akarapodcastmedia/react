@@ -77,6 +77,7 @@ function Upload({refresh}) {
   let tracker=0;
   useEffect(async()=>{
     if(refresh && tracker==0){
+      console.log("with refresh");
       async function togetrefresh(){
         axios.defaults.withCredentials = true;
         const {data} = await axios.post("https://dev.akarahub.tech/server4/akara/web/access/token",{},{
@@ -108,7 +109,9 @@ function Upload({refresh}) {
       // calll the function
       togetrefresh();  
     }
-  }
+  }else{
+        console.log("without refresh");
+    }
   },[]);
  
  
