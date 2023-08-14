@@ -260,7 +260,7 @@ function Upload({refresh}) {
                             }
                            
                             axios.defaults.withCredentials = true;
-                            const {data} = await axios.post("https://dev.akarahub.tech/server9/akara/web/access/token",{},{
+                            const {data} = await axios.post("https://dev.akarahub.tech/server4/akara/web/access/token",{},{
                                 headers : {
                                     "Authorization" : `bearer ${refresh}`,
                                     "content-type"  : "application/json",
