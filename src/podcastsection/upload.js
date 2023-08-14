@@ -226,7 +226,6 @@ function Upload({refresh}) {
                           type="button"
                           onClick={ async() => {
                             setShowModal(false);
-                                
                             const dataServer = new FormData();
                             dataServer.append("title",title);
                             dataServer.append("composer",composer);
@@ -259,13 +258,16 @@ function Upload({refresh}) {
                             }
                            
                             axios.defaults.withCredentials = true;
-                            const {data} = await axios.post("https://dev.akarahub.tech/server9/akara/web/access/token",{},{
+                            console.log("refreshToken",refresh);
+                            const {data} = await axios.post("https://dev.akarahub.tech/server4/akara/web/access/token",{},{
                                 headers : {
                                     "Authorization" : `bearer ${refresh}`,
                                     "content-type"  : "application/json",
                                 }
                             });
+              
                             if(data){
+                                 console.log("accessToken ",data);
                                  axios.post("https://dev.akarahub.tech/server9/web/gateway/upload/podcast",dataServer,{
                                
                                       headers : {
