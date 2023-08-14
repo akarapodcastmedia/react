@@ -86,7 +86,7 @@ function Upload({refresh}) {
              }
         });
         accesstoken = data.accessToken;
-        console.log(accesstoken);
+        console.log("first ",accesstoken);
         tracker=1;
         // to get the data of cagtegory
         if(accesstoken != null){
@@ -101,7 +101,8 @@ function Upload({refresh}) {
           console.log(data);
           if(data){
             setCategories(data.data);
-          }
+          }else{
+            console.log("No data of category");
         }
       }
       // calll the function
@@ -258,6 +259,7 @@ function Upload({refresh}) {
                             }
                            
                             axios.defaults.withCredentials = true;
+
                             console.log("refreshToken",refresh);
                             const {data} = await axios.post("https://dev.akarahub.tech/server4/akara/web/access/token",{},{
                                 headers : {
