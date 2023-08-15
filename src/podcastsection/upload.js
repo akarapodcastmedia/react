@@ -75,7 +75,9 @@ function Upload({refresh}) {
   }
   let accesstoken=null;
   let tracker=0;
-  useEffect(async()=>{
+  useEffect(()=>{
+    // testing palace only
+    console.log("come to this place ");
     if(refresh && tracker==0){
       console.log("with refresh");
       async function togetrefresh(){
