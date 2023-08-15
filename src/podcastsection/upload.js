@@ -76,7 +76,7 @@ function Upload({refresh}) {
   let accesstoken=null;
   let tracker=0;
   useEffect(async()=>{
-      console.log("with refresh");
+      console.log("with refresh in upload");
       async function togetrefresh(){
         axios.defaults.withCredentials = true;
         const {data} = await axios.post("https://dev.akarahub.tech/server4/akara/web/access/token",{},{
@@ -104,10 +104,10 @@ function Upload({refresh}) {
           }else{
             console.log("No data of category");
         }
-      }
-      // calll the function
-      await togetrefresh();  
+      }   
     }
+     // calll the function
+      await togetrefresh(); 
  
   },[]);
  
