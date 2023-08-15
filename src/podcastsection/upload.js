@@ -76,9 +76,6 @@ function Upload({refresh}) {
   let accesstoken=null;
   let tracker=0;
   useEffect(()=>{
-    // testing palace only
-    console.log("come to this place ");
-    if(refresh && tracker==0){
       console.log("with refresh");
       async function togetrefresh(){
         axios.defaults.withCredentials = true;
@@ -111,9 +108,7 @@ function Upload({refresh}) {
       // calll the function
       togetrefresh();  
     }
-  }else{
-        console.log("without refresh");
-    }
+ 
   },[]);
  
  
